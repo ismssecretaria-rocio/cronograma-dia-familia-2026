@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Día de la Familia Salottiana 2026 — Cronograma</title>
+<meta name="description" content="Cronograma del Día de la Familia Salottiana 2026 — Unidad Educativa Martha Salotti. Actividades por horario y zonas del predio.">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Día de la Familia Salottiana 2026 — Cronograma">
+<meta property="og:description" content="Actividades, talleres y zonas del Día de la Familia 2026 — Unidad Educativa Martha Salotti.">
+<meta property="og:image" content="og-image-familia-v2.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Día de la Familia Salottiana 2026 — Cronograma">
+<meta name="twitter:image" content="og-image-familia-v2.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --azul-prof:#1B3A5C;
+    --azul-claro:#4C8FBF;
+    --amarillo:#F4B740;
+    --amarillo-suave:#FBE6B8;
+    --gris:#6B7280;
+    --gris-osc:#2B3440;
+    --bg:#FAF9F6;
+    --paper:#FFFFFF;
+    --ink:#20262E;
+    --line:#E3E0D8;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:'Work Sans', sans-serif;-webkit-font-smoothing:antialiased;}
+  .serif{font-family:'Fraunces', serif;}
+
+  /* ===== HERO ===== */
+  header.hero{
+    background:var(--gris-osc);
+    color:#fff;
+    padding:48px 20px 40px;
+    position:relative;
+    overflow:hidden;
+    text-align:left;
+  }
+  header.hero::before{
+    content:"";
+    position:absolute; top:0; right:0; bottom:0;
+    width:38%;
+    background:
+      radial-gradient(circle at 30% 20%, rgba(244,183,64,.5) 0, transparent 45%),
+      radial-gradient(circle at 70% 70%, rgba(76,143,191,.45) 0, transparent 50%);
+    opacity:.9;
+  }
+  .hero-inner{max-width:760px; margin:0 auto; position:relative; z-index:2;}
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    font-size:.7rem; letter-spacing:.2em; text-transform:uppercase;
+    color:var(--gris-osc); font-weight:700;
+    background:var(--amarillo);
+    padding:5px 12px; border-radius:999px;
+    margin-bottom:18px;
+  }
+  h1{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-style:italic;
+    font-size:clamp(2rem, 6vw, 3.2rem);
+    line-height:1.04;
+    margin:0 0 12px;
+    max-width:520px;
+  }
+  .hero-sub{font-size:.95rem;color:#C9CDD3;max-width:460px;line-height:1.55;margin:0 0 20px;}
+  .hero-meta{display:flex;gap:22px;flex-wrap:wrap;font-size:.82rem;}
+  .hero-meta div{display:flex;flex-direction:column;gap:2px;}
+  .hero-meta b{color:var(--amarillo); font-size:.68rem; text-transform:uppercase; letter-spacing:.08em; font-weight:700;}
+
+  /* ===== TABS ===== */
+  .tabnav{
+    position:sticky; top:0; z-index:20;
+    background:var(--bg);
+    border-bottom:1px solid var(--line);
+  }
+  .tabnav-inner{max-width:760px;margin:0 auto;padding:0 20px;display:flex;gap:28px;}
+  .tab-btn{
+    border:none;background:none;cursor:pointer;
+    font-family:'Work Sans',sans-serif;font-weight:700;font-size:.88rem;
+    padding:16px 0 13px;
+    color:var(--gris);
+    border-bottom:3px solid transparent;
+    transition:all .15s ease;
+  }
+  .tab-btn.active{color:var(--azul-prof); border-bottom-color:var(--amarillo);}
+
+  main{max-width:760px;margin:0 auto;padding:30px 20px 70px;}
+  .view{display:none;}
+  .view.active{display:block;}
+
+  .section-title{font-family:'Fraunces', serif; font-weight:600; font-style:italic; font-size:1.5rem; color:var(--azul-prof); margin:0 0 4px;}
+  .section-note{font-size:.82rem;color:var(--gris);margin:0 0 20px;}
+
+  /* ===== Todo el dia: horizontal scroll strip ===== */
+  .allday-scroll{display:flex;gap:12px;overflow-x:auto;padding-bottom:10px;margin-bottom:38px;-webkit-overflow-scrolling:touch;}
+  .allday-scroll::-webkit-scrollbar{height:6px;}
+  .allday-scroll::-webkit-scrollbar-thumb{background:var(--line);border-radius:3px;}
+  .allday-card{
+    flex:0 0 240px;
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:4px 16px 4px 16px;
+    padding:16px;
+    position:relative;
+  }
+  .allday-card::before{
+    content:"";
+    position:absolute; top:0; left:0; width:5px; height:100%;
+    border-radius:4px 0 0 4px;
+  }
+  .allday-card.inicial::before{background:var(--amarillo);}
+  .allday-card.primario::before{background:var(--azul-claro);}
+  .allday-card.secundario::before{background:var(--azul-prof);}
+  .allday-card.superior::before{background:var(--gris);}
+  .allday-label{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--gris);margin-bottom:8px;}
+  .allday-title{font-weight:700;font-size:.92rem;line-height:1.3;margin-bottom:6px;color:var(--ink);}
+  .allday-zona{font-size:.76rem;color:var(--azul-prof);font-weight:600;margin-bottom:8px;}
+  .allday-desc{font-size:.78rem;color:#555;line-height:1.4;}
+
+  /* ===== Filter row ===== */
+  .filter-row{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:8px;}
+  .flabel{font-size:.68rem;text-transform:uppercase;letter-spacing:.08em;color:var(--gris);font-weight:700;margin-right:4px;}
+  .fchip{
+    border:1.5px solid var(--line); background:var(--paper); cursor:pointer;
+    font-family:'Work Sans',sans-serif; font-weight:600; font-size:.78rem;
+    padding:6px 13px; border-radius:999px; color:var(--ink);
+    display:flex; align-items:center; gap:6px;
+    transition:all .15s ease;
+  }
+  .fchip .fdot{width:8px;height:8px;border-radius:50%;}
+  .fchip[data-level="inicial"] .fdot{background:var(--amarillo);}
+  .fchip[data-level="primario"] .fdot{background:var(--azul-claro);}
+  .fchip[data-level="secundario"] .fdot{background:var(--azul-prof);}
+  .fchip[data-level="superior"] .fdot{background:var(--gris);}
+  .fchip[data-level="todos"] .fdot{background:var(--ink);}
+  .fchip.active{background:var(--gris-osc); border-color:var(--gris-osc); color:#fff;}
+
+  .search-wrap{position:relative;margin:14px 0 30px;}
+  .search-wrap input{
+    width:100%; border:1.5px solid var(--line); border-radius:999px;
+    padding:11px 16px 11px 38px; font-family:'Work Sans',sans-serif; font-size:.88rem;
+    outline:none; background:var(--paper);
+  }
+  .search-wrap input:focus{border-color:var(--azul-claro);}
+  .search-wrap::before{content:"🔍"; position:absolute; left:14px; top:50%; transform:translateY(-50%); font-size:.8rem; opacity:.5;}
+
+  /* ===== Timeline rail ===== */
+  .rail{position:relative; padding-left:64px;}
+  .rail::before{
+    content:"";
+    position:absolute; left:23px; top:6px; bottom:6px; width:2px;
+    background:var(--line);
+  }
+  .hour-group{position:relative; margin-bottom:6px;}
+  .hour-node{
+    position:absolute; left:-64px; top:0; width:48px; text-align:right;
+    font-family:'Fraunces', serif; font-weight:600; font-size:1.25rem; color:var(--azul-prof);
+  }
+  .hour-dot{
+    position:absolute; left:19px; top:6px; width:10px; height:10px; border-radius:50%;
+    background:var(--azul-prof); border:3px solid var(--bg);
+  }
+  .event-row{
+    position:relative;
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding:14px 16px;
+    margin:0 0 12px 8px;
+  }
+  .event-row::before{
+    content:"";
+    position:absolute; left:-20px; top:18px; width:8px; height:8px; border-radius:50%;
+  }
+  .event-row.inicial::before{background:var(--amarillo);}
+  .event-row.primario::before{background:var(--azul-claro);}
+  .event-row.secundario::before{background:var(--azul-prof);}
+  .event-row.superior::before{background:var(--gris);}
+
+  .event-top{display:flex; align-items:baseline; gap:8px; flex-wrap:wrap; margin-bottom:5px;}
+  .event-hora{font-weight:700; font-size:.82rem; color:var(--azul-prof);}
+  .event-level{
+    font-size:.64rem; font-weight:700; text-transform:uppercase; letter-spacing:.05em;
+    padding:2px 8px; border-radius:5px; color:#fff;
+  }
+  .event-level.inicial{background:var(--amarillo); color:#4a3400;}
+  .event-level.primario{background:var(--azul-claro);}
+  .event-level.secundario{background:var(--azul-prof);}
+  .event-level.superior{background:var(--gris);}
+  .event-zona{font-size:.76rem; color:var(--gris); margin-left:auto;}
+  .event-title{font-weight:700; font-size:.98rem; margin-bottom:3px; color:var(--ink); font-family:'Fraunces',serif;}
+  .event-desc{font-size:.84rem; color:#4A5059; line-height:1.45;}
+  .event-curso{font-size:.76rem; color:var(--azul-prof); font-weight:600; margin-top:4px;}
+
+  .empty-msg{text-align:center;padding:40px 20px;color:var(--gris);display:none;}
+
+  /* ===== Zonas: directory list ===== */
+  .zona-row{
+    display:flex; gap:18px; align-items:flex-start;
+    padding:20px 0;
+    border-bottom:1px solid var(--line);
+  }
+  .zona-row:first-child{padding-top:0;}
+  .zona-id{
+    font-family:'Fraunces', serif; font-weight:600; font-style:italic;
+    font-size:2rem; color:var(--line); width:64px; flex-shrink:0; line-height:1;
+  }
+  .zona-main{flex:1;}
+  .zona-name{font-weight:700; font-size:1.05rem; margin-bottom:5px; color:var(--ink); display:flex; align-items:center; gap:8px; flex-wrap:wrap;}
+  .zona-desc{font-size:.86rem; color:#4A5059; line-height:1.5; margin-bottom:8px;}
+  .zona-levels{display:flex; gap:6px; flex-wrap:wrap;}
+  .lvl-pill{font-size:.64rem; font-weight:700; text-transform:uppercase; letter-spacing:.05em; padding:2px 9px; border-radius:999px; color:#fff;}
+  .lvl-pill.inicial{background:var(--amarillo); color:#4a3400;}
+  .lvl-pill.primario{background:var(--azul-claro);}
+  .lvl-pill.secundario{background:var(--azul-prof);}
+  .lvl-pill.superior{background:var(--gris);}
+
+  footer{text-align:center;padding:26px 16px 44px;font-size:.78rem;color:var(--gris);}
+
+  @media (max-width:480px){
+    .rail{padding-left:48px;}
+    .hour-node{left:-48px; width:36px; font-size:1.05rem;}
+    .hour-dot{left:11px;}
+    .rail::before{left:15px;}
+    .event-row{margin-left:4px;}
+    .zona-id{font-size:1.5rem; width:46px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">Unidad Educativa Martha Salotti</div>
+    <h1>Día de la Familia<br>Salottiana 2026</h1>
+    <p class="hero-sub">Una jornada de talleres, feria de juegos, kermés y actividades pensadas para compartir en familia.</p>
+    <div class="hero-meta">
+      <div><b>Horario</b>10:00 a 15:45 hs</div>
+      <div><b>Niveles</b>Jardín · Primaria · Secundaria · Superior</div>
+    </div>
+  </div>
+</header>
+
+<div class="tabnav">
+  <div class="tabnav-inner">
+    <button class="tab-btn active" data-tab="cronograma">Cronograma</button>
+    <button class="tab-btn" data-tab="zonas">Zonas del predio</button>
+  </div>
+</div>
+
+<main>
+
+  <!-- ================= CRONOGRAMA ================= -->
+  <section id="view-cronograma" class="view active">
+
+    <h2 class="section-title">Durante toda la jornada</h2>
+    <p class="section-note">Sin horario fijo — disponibles de principio a fin.</p>
+    <div class="allday-scroll" id="allday-list"></div>
+
+    <h2 class="section-title">Línea de tiempo</h2>
+    <p class="section-note">Filtrá por nivel o buscá una actividad puntual.</p>
+
+    <div class="filter-row" id="legend">
+      <span class="flabel">Nivel:</span>
+      <button class="fchip active" data-level="todos"><span class="fdot"></span>Todos</button>
+      <button class="fchip" data-level="inicial"><span class="fdot"></span>Inicial</button>
+      <button class="fchip" data-level="primario"><span class="fdot"></span>Primario</button>
+      <button class="fchip" data-level="secundario"><span class="fdot"></span>Secundario</button>
+      <button class="fchip" data-level="superior"><span class="fdot"></span>Superior</button>
+    </div>
+    <div class="search-wrap">
+      <input type="text" id="search" placeholder="Buscar por curso, docente o actividad...">
+    </div>
+
+    <div class="rail" id="timeline"></div>
+    <div class="empty-msg" id="emptyMsg">No se encontraron actividades con ese criterio.</div>
+  </section>
+
+  <!-- ================= ZONAS ================= -->
+  <section id="view-zonas" class="view">
+    <h2 class="section-title">Zonas del predio</h2>
+    <p class="section-note">Ubicá cada actividad según la zona donde se desarrolla.</p>
+    <div id="zonas-list"></div>
+  </section>
+
+</main>
+
+<footer>
+  Cronograma sujeto a modificaciones de último momento · Unidad Educativa Martha Salotti
+</footer>
+
+<script>
+const LEVEL_LABEL = {inicial:"Inicial", primario:"Primario", secundario:"Secundario", superior:"Superior"};
+
+const ALLDAY = [
+  {level:"inicial", zona:"Patio de Banderas", titulo:"Muestra de arte interactiva \"Confluencias: el arte que nos conecta\"", desc:"El arte se convierte en puente, abrazo y pertenencia. Habilitada toda la jornada."},
+  {level:"secundario", zona:"Aulas 1 a 5", titulo:"Talleres de Nivel Secundario", desc:"Propuestas de taller a cargo de los distintos cursos del nivel secundario."},
+  {level:"secundario", zona:"Zona 9", titulo:"Kermés Nivel Secundario", desc:"Juegos y puestos organizados por los estudiantes de secundaria."},
+  {level:"secundario", zona:"Zonas 7 y 12", titulo:"Feria de los Emprendedores", desc:"Stands con los emprendimientos de los estudiantes de secundaria."},
+  {level:"secundario", zona:"Zona 5", titulo:"Teatro Nivel Secundario", desc:"Presentación teatral a cargo de estudiantes de secundaria."},
+];
+
+const TIMELINE = [
+  {min:600, hora:"10:00", level:"primario", curso:"Todos los cursos", zona:"Patio de Banderas", titulo:"Nuestra biblioteca dice presente", desc:"Material de lectura y juegos lúdicos para compartir en familia. A cargo de Prof. Nancy."},
+
+  {min:630, hora:"10:30 a 11:15", level:"inicial", curso:"Jardín", zona:"Patio de Banderas · Gazebo N° 1", titulo:"Taller \"Huellas que florecen\"", desc:"Mural colectivo inspirado en la llegada de la primavera. A cargo de Berenice Gálvez y Brenda Noguera."},
+  {min:630, hora:"10:30", level:"primario", curso:"1° A y B", zona:"Patio de Banderas", titulo:"Taller de armado de Portalápices", desc:"Las familias y estudiantes crean un objeto reutilizando envases, promoviendo el cuidado del ambiente. Docentes Carolina y Noelia."},
+  {min:630, hora:"10:30", level:"primario", curso:"2° A y B", zona:"Patio de Banderas", titulo:"Taller de armado de Juguetes", desc:"Construcción de juguetes con materiales reciclados. Docentes Camila y Rocío."},
+  {min:630, hora:"10:30 a 10:45", level:"superior", curso:"Instituto Superior", zona:"Espacio Verde", titulo:"Las Orugas", desc:"A cargo de Arrieta Mirko, Espinoza Nataly, Godoy Natalia y Vidal Morena."},
+
+  {min:645, hora:"10:45 a 11:00", level:"superior", curso:"Instituto Superior", zona:"Espacio Verde", titulo:"El Aro Viajero", desc:"A cargo de Chimeti Ailín, Velázquez Iara, Boero Tiago y Maldonado Julieta."},
+
+  {min:660, hora:"11:00", level:"primario", curso:"Todos los cursos", zona:"Patio de Banderas", titulo:"Taller de Grabado / Estampa", desc:"Diseños y estampados sobre remeras. A cargo de Prof. Mauro."},
+  {min:660, hora:"11:00 y 14:00", level:"primario", curso:"Todos los cursos", zona:"Patio de Banderas", titulo:"Taller de Danza", desc:"Un espacio para compartir en familia a través de la música y las danzas tradicionales argentinas. A cargo de Prof. Jesica y Noelia."},
+  {min:660, hora:"11:00 a 11:15", level:"superior", curso:"Instituto Superior", zona:"Espacio Verde", titulo:"Sinapsis - Conectados", desc:"A cargo de Kisca Sol, Caveda Evelyn, Benemérito Matías, Ojeda Eliseo y Delgadín Javier."},
+
+  {min:675, hora:"11:15 a 11:30", level:"superior", curso:"Instituto Superior", zona:"Espacio Verde", titulo:"El Pasa Vaso", desc:"A cargo de Báez Felipe, Ojeda Joaquín, Ares Franco, Soria Ivana y Godoy Camila."},
+
+  {min:690, hora:"11:30 y 14:00", level:"primario", curso:"Todos los cursos", zona:"Salón de 3er año", titulo:"Taller de Percusión", desc:"Exploración de ritmos y sonidos. A cargo de Prof. Jorge."},
+  {min:690, hora:"11:30 a 11:45", level:"superior", curso:"Instituto Superior", zona:"Espacio Verde", titulo:"La Batalla Medieval", desc:"A cargo de David y Sole."},
+
+  {min:705, hora:"11:45 a 12:00", level:"superior", curso:"Instituto Superior", zona:"Espacio Verde", titulo:"Ups, cuidado que no se caiga", desc:"A cargo de Argüellos Alma, Sánchez Tamara, Ruiz Mara, Taborda Magalí y Espínola."},
+
+  {min:720, hora:"12:00 a 12:45", level:"inicial", curso:"Jardín", zona:"Patio de Banderas · Gazebo N° 1", titulo:"Taller \"Creando conciencia ambiental\"", desc:"Mural colectivo sobre cómo nuestras acciones individuales nos conectan como comunidad. A cargo de Anabel Faro y Romina Castro."},
+  {min:720, hora:"12:00", level:"primario", curso:"3° A y B", zona:"Patio de Banderas", titulo:"Taller de armado de Macetas", desc:"Elaboración de macetas a partir de elementos reutilizables. Docentes Amalia y Daiana."},
+  {min:720, hora:"12:00 a 12:15", level:"superior", curso:"Instituto Superior", zona:"Espacio Verde", titulo:"El Espantapájaros Loco", desc:"A cargo de Argüellos Alma, Sánchez Tamara, Ruiz Mara, Taborda Magalí, Espínola, Beloso Inés, Rojas Macarena y Tapia Salomé."},
+
+  {min:735, hora:"12:15 a 12:30", level:"superior", curso:"Instituto Superior", zona:"Espacio Verde", titulo:"La Bolsa Movediza", desc:"A cargo de Mirko Arrieta."},
+
+  {min:750, hora:"12:30", level:"primario", curso:"4° A y B", zona:"Patio de Banderas", titulo:"Taller de armado de Juegos de mesa", desc:"Creación de juegos de mesa con materiales reciclados. Docente Sandra."},
+  {min:750, hora:"12:30 a 12:45", level:"superior", curso:"Instituto Superior", zona:"Espacio Verde", titulo:"Payaso loco", desc:"A cargo de Díaz Molina Melanie, Peña Eugenia, Gallardo Martín y Ruiz Santiago."},
+
+  {min:765, hora:"12:45 a 13:00", level:"superior", curso:"Instituto Superior", zona:"Espacio Verde", titulo:"El Ciempiés Humano", desc:"A cargo de Beloso Inés, Rojas Macarena y Tapia Salomé."},
+
+  {min:780, hora:"13:00 a 13:15", level:"superior", curso:"Instituto Superior", zona:"Espacio Verde", titulo:"Coro de Locos", desc:"A cargo de David y Sole."},
+
+  {min:795, hora:"13:15 a 13:30", level:"superior", curso:"Instituto Superior", zona:"Espacio Verde", titulo:"Tangram cooperativo", desc:"A cargo de Casas Thiago, Ocampos Matías, Ojeda Sofía, Villavicencio Ariadna y Vera Abril."},
+
+  {min:810, hora:"13:30 a 14:15", level:"inicial", curso:"Jardín", zona:"Patio de Banderas · Gazebo N° 1", titulo:"Taller \"Atrapasoles\"", desc:"La luz atraviesa las creaciones individuales para proyectar colores colectivos. A cargo de María de la Paz Gómez Santoro."},
+  {min:810, hora:"13:30", level:"primario", curso:"5° y 6°", zona:"Patio de Banderas", titulo:"Taller de Foto Botella", desc:"Objetos decorativos personalizados con botellas reutilizadas. Docentes Jesica, Sabrina y Andrea."},
+  {min:810, hora:"13:30 a 13:45", level:"superior", curso:"Instituto Superior", zona:"Espacio Verde", titulo:"Movidito Movidito", desc:"A cargo de Caneva Maia y Sánchez Jimena."},
+
+  {min:825, hora:"13:45 a 14:00", level:"superior", curso:"Instituto Superior", zona:"Espacio Verde", titulo:"Tatetí", desc:"A cargo de Garcete Tiara, Billordo J., Bruno Augusto y Luján Ibarra."},
+
+  {min:840, hora:"14:00 a 14:15", level:"superior", curso:"Instituto Superior", zona:"Espacio Verde", titulo:"El Vaso Araña", desc:"A cargo de Casas Thiago, Ocampos Matías, Ojeda Sofía, Villavicencio Ariadna y Vera Abril."},
+
+  {min:855, hora:"14:15 a 14:30", level:"superior", curso:"Instituto Superior", zona:"Espacio Verde", titulo:"Cara Desordenada", desc:"A cargo de Martino Ignacio, Maidana Matías, Córdoba Mauro y Sandoval Nahuel."},
+
+  {min:870, hora:"14:30 a 14:45", level:"superior", curso:"Instituto Superior", zona:"Espacio Verde", titulo:"Pizza Ya", desc:"A cargo de Díaz Molina Melanie, Peña Eugenia, Gallardo Martín y Ruiz Santiago."},
+
+  {min:885, hora:"14:45 a 15:00", level:"superior", curso:"Instituto Superior", zona:"Espacio Verde", titulo:"Collares Gigantes", desc:"A cargo de Arrieta Mirko, Espinoza Nataly, Godoy Natalia y Vidal Morena."},
+
+  {min:900, hora:"15:00 a 15:15", level:"superior", curso:"Instituto Superior", zona:"Espacio Verde", titulo:"El piso es Lava", desc:"A cargo de Marino Ignacio, Pérez Juan y Campos Alejo."},
+
+  {min:915, hora:"15:15 a 15:30", level:"superior", curso:"Instituto Superior", zona:"Espacio Verde", titulo:"Los Fontaneros", desc:"A cargo de Núñez Jeremías, García Ian, Estigarribia Brian, Martínez Tiara y Rojas Tobías."},
+
+  {min:930, hora:"15:30 a 15:45", level:"superior", curso:"Instituto Superior", zona:"Espacio Verde", titulo:"Acrosport", desc:"Responsables no consignados."},
+];
+
+const ZONAS = [
+  {num:"01", name:"Patio de Banderas", level:["inicial","primario"], desc:"Zona principal del evento. Allí se desarrollan la muestra de arte, los talleres de Jardín y la mayoría de los talleres de Primaria."},
+  {num:"02", name:"Gazebo N° 1", level:["inicial"], desc:"Dentro del Patio de Banderas. Espacio de los talleres del Jardín: \"Huellas que florecen\", \"Creando conciencia ambiental\" y \"Atrapasoles\"."},
+  {num:"03", name:"Aulas 1 a 5", level:["secundario"], desc:"Talleres de Nivel Secundario, distribuidos en las aulas 1, 2, 3, 4 y 5."},
+  {num:"05", name:"Teatro", level:["secundario"], desc:"Presentación teatral a cargo de los estudiantes de Nivel Secundario."},
+  {num:"09", name:"Kermés", level:["secundario"], desc:"Juegos y puestos de la Kermés organizada por Nivel Secundario."},
+  {num:"7·12", name:"Feria de los Emprendedores", level:["secundario"], desc:"Stands con los emprendimientos de los estudiantes de Nivel Secundario."},
+  {num:"13", name:"Salón de 3er año", level:["primario"], desc:"Taller de Percusión a cargo del Prof. Jorge, a las 11:30 y a las 14:00 hs."},
+  {num:"EV", name:"Espacio Verde", level:["superior"], desc:"Feria de juegos a cargo de los estudiantes del Instituto Superior: más de 20 postas desde las 10:30 hasta las 15:45 hs."},
+];
+
+function render(){
+  const activeLevel = document.querySelector('.fchip.active').dataset.level;
+  const q = document.getElementById('search').value.trim().toLowerCase();
+
+  const alldayList = document.getElementById('allday-list');
+  alldayList.innerHTML = '';
+  ALLDAY.forEach(it=>{
+    const card = document.createElement('div');
+    card.className = 'allday-card '+it.level;
+    card.innerHTML = `
+      <div class="allday-label">${LEVEL_LABEL[it.level]}</div>
+      <div class="allday-title">${it.titulo}</div>
+      <div class="allday-zona">📍 ${it.zona}</div>
+      <div class="allday-desc">${it.desc}</div>`;
+    alldayList.appendChild(card);
+  });
+
+  const filtered = TIMELINE.filter(it=>{
+    const matchLevel = activeLevel === 'todos' || it.level === activeLevel;
+    const haystack = (it.curso+" "+it.titulo+" "+it.desc+" "+it.zona).toLowerCase();
+    const matchSearch = !q || haystack.includes(q);
+    return matchLevel && matchSearch;
+  }).sort((a,b)=>a.min-b.min);
+
+  const timeline = document.getElementById('timeline');
+  const emptyMsg = document.getElementById('emptyMsg');
+  timeline.innerHTML = '';
+
+  if(filtered.length === 0){
+    emptyMsg.style.display = 'block';
+  } else {
+    emptyMsg.style.display = 'none';
+    let lastHour = null;
+    filtered.forEach(it=>{
+      const hourKey = it.hora.split(' ')[0].split(':')[0];
+      if(hourKey !== lastHour){
+        const group = document.createElement('div');
+        group.className = 'hour-group';
+        group.innerHTML = `<div class="hour-node">${hourKey}</div><div class="hour-dot"></div>`;
+        timeline.appendChild(group);
+        lastHour = hourKey;
+      }
+      const row = document.createElement('div');
+      row.className = 'event-row '+it.level;
+      row.innerHTML = `
+        <div class="event-top">
+          <span class="event-hora">${it.hora}</span>
+          <span class="event-level ${it.level}">${LEVEL_LABEL[it.level]}</span>
+          <span class="event-zona">📍 ${it.zona}</span>
+        </div>
+        <div class="event-title">${it.titulo}</div>
+        <div class="event-desc">${it.desc}</div>
+        ${it.curso !== 'Todos los cursos' ? `<div class="event-curso">${it.curso}</div>` : ''}
+      `;
+      timeline.appendChild(row);
+    });
+  }
+}
+
+function renderZonas(){
+  const list = document.getElementById('zonas-list');
+  list.innerHTML = '';
+  ZONAS.forEach(z=>{
+    const row = document.createElement('div');
+    row.className = 'zona-row';
+    const pills = z.level.map(l=>`<span class="lvl-pill ${l}">${LEVEL_LABEL[l]}</span>`).join('');
+    row.innerHTML = `
+      <div class="zona-id">${z.num}</div>
+      <div class="zona-main">
+        <div class="zona-name">${z.name}</div>
+        <div class="zona-desc">${z.desc}</div>
+        <div class="zona-levels">${pills}</div>
+      </div>
+    `;
+    list.appendChild(row);
+  });
+}
+
+document.getElementById('legend').addEventListener('click', e=>{
+  const btn = e.target.closest('.fchip');
+  if(!btn) return;
+  document.querySelectorAll('.fchip').forEach(c=>c.classList.remove('active'));
+  btn.classList.add('active');
+  render();
+});
+document.getElementById('search').addEventListener('input', render);
+
+document.querySelectorAll('.tab-btn').forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));
+    document.getElementById('view-'+btn.dataset.tab).classList.add('active');
+  });
+});
+
+render();
+renderZonas();
+</script>
+</body>
+</html>
